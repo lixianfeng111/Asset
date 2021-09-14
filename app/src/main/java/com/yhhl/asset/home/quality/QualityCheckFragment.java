@@ -1,6 +1,5 @@
 package com.yhhl.asset.home.quality;
 
-import android.os.Handler;
 import android.view.View;
 import android.widget.TextView;
 import com.othershe.baseadapter.interfaces.OnLoadMoreListener;
@@ -8,11 +7,8 @@ import com.yhhl.asset.R;
 import com.yhhl.asset.base.BaseFragment;
 import com.yhhl.asset.base.BasePresenter;
 import com.yhhl.asset.event.DismissEvent;
-import com.yhhl.asset.home.checksafe.CheckSafeFragment;
 import com.yhhl.asset.home.quality.adapter.QualityCheckAdapter;
-
 import org.greenrobot.eventbus.EventBus;
-
 import java.util.ArrayList;
 import java.util.List;
 import androidx.recyclerview.widget.LinearLayoutManager;

@@ -1,4 +1,6 @@
+
 package com.yhhl.asset.util;
+
 import android.view.View;
 import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
@@ -21,7 +23,6 @@ public class WebViewUtil {
         webView2.getSettings().setNeedInitialFocus(true); //-> 是否需要获取焦点
         webView2.getSettings().setGeolocationEnabled(false);// -> 设置开启定位功能
         webView2.getSettings().setBlockNetworkLoads(false); //-> 是否从网络获取资源
-
 
         webView2.getSettings().setLoadWithOverviewMode(true);//网页自适应问题
         webView2.getSettings().setUseWideViewPort(true); //解决网页自适应问题
@@ -53,6 +54,7 @@ public class WebViewUtil {
         });
 
     }
+
     public static void clearWebView(){
         if (webView2 != null) {
             webView2.stopLoading();
