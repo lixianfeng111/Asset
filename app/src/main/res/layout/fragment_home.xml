@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_F7"
+    android:orientation="vertical">
+
+    <include layout="@layout/titlebar"/>
+
+
+    <ScrollView
+        android:scrollbars="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:background="@drawable/headpic"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_190">
+
+                <ImageView
+                    android:id="@+id/weatherBa"
+                    android:scaleType="fitXY"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:text="添加城市+"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:id="@+id/city"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <LinearLayout
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:textColor="@color/white"
+                            android:id="@+id/now_temperature"
+                            android:text="0C"
+                            android:textSize="35sp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <Space
+                            android:layout_weight="1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:textColor="@color/white"
+                            android:id="@+id/date"
+                            android:layout_marginRight="15dp"
+                            android:text="8月03日"
+                            android:textSize="12sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:textColor="@color/white"
+                            android:id="@+id/week"
+                            android:layout_marginRight="20dp"
+                            android:text="周六"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:textColor="@color/white"
+                            android:id="@+id/weather"
+                            android:text="多云"
+                            android:layout_marginLeft="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:textColor="@color/white"
+                            android:id="@+id/today_temperature"
+                            android:layout_marginLeft="20dp"
+                            android:text="21/23 ℃"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:textColor="@color/white"
+                            android:id="@+id/wind"
+                            android:text="东南风一级"
+                            android:layout_marginLeft="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:textColor="@color/white"
+                            android:id="@+id/air_quality"
+                            android:layout_marginLeft="20dp"
+                            android:text="空气质量：优"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:textColor="@color/white"
+                            android:id="@+id/aqi"
+                            android:layout_marginLeft="20dp"
+                            android:text="空气指数：50"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:textColor="@color/white"
+                            android:id="@+id/tomorrow_weather"
+                            android:text="明天：多云"
+                            android:layout_marginLeft="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:textColor="@color/white"
+                            android:id="@+id/tomorrow_temperature"
+                            android:layout_marginLeft="20dp"
+                            android:text="21/23 ℃"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:textColor="@color/white"
+                            android:id="@+id/tomorrow_wind"
+                            android:layout_marginLeft="20dp"
+                            android:text="南风3级"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/homePager"
+                    android:text="   项目首页   "
+                    android:textColor="@color/color_2F"
+                    android:textSize="@dimen/sp_14"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:drawableTop="@mipmap/project_home"
+                    android:drawablePadding="10dp"
+                    android:paddingBottom="@dimen/dp_27"
+                    android:layout_marginTop="@dimen/dp_27"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <View
+                    android:background="@color/color_F7"
+                    android:layout_width="@dimen/dp_1"
+                    android:layout_height="match_parent"/>
+                <TextView
+                    android:id="@+id/design_check"
+                    android:text="设计交底查询"
+                    android:textColor="@color/color_2F"
+                    android:textSize="@dimen/sp_14"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="@dimen/dp_1"
+                    android:drawableTop="@mipmap/design_check"
+                    android:drawablePadding="10dp"
+                    android:layout_marginTop="@dimen/dp_27"
+                    android:paddingBottom="@dimen/dp_27"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <View
+                    android:background="@color/color_F7"
+                    android:layout_width="@dimen/dp_1"
+                    android:layout_height="match_parent"/>
+                <TextView
+                    android:id="@+id/progress_simulation"
+                    android:text="   进度模拟   "
+                    android:textColor="@color/color_2F"
+                    android:textSize="@dimen/sp_14"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="@dimen/dp_1"
+                    android:drawableTop="@mipmap/progress_simulation"
+                    android:drawablePadding="10dp"
+                    android:layout_marginTop="@dimen/dp_27"
+                    android:paddingBottom="@dimen/dp_27"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/dp_1"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/completion_results"
+                    android:text="   竣工成果   "
+                    android:textColor="@color/color_2F"
+                    android:textSize="@dimen/sp_14"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:drawableTop="@mipmap/completion_results"
+                    android:drawablePadding="10dp"
+                    android:paddingBottom="@dimen/dp_27"
+                    android:layout_marginTop="@dimen/dp_27"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <View
+                    android:background="@color/color_F7"
+                    android:layout_width="@dimen/dp_1"
+                    android:layout_height="match_parent"/>
+                <TextView
+                    android:id="@+id/check_results"
+                    android:text="竣工成果验收"
+                    android:textColor="@color/color_2F"
+                    android:textSize="@dimen/sp_14"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="@dimen/dp_1"
+                    android:drawableTop="@mipmap/check_results"
+                    android:drawablePadding="10dp"
+                    android:layout_marginTop="@dimen/dp_27"
+                    android:paddingBottom="@dimen/dp_27"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <View
+                    android:background="@color/color_F7"
+                    android:layout_width="@dimen/dp_1"
+                    android:layout_height="match_parent"/>
+                <TextView
+                    android:id="@+id/safety_check"
+                    android:text="   安全检查   "
+                    android:textColor="@color/color_2F"
+                    android:textSize="@dimen/sp_14"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="@dimen/dp_1"
+                    android:drawableTop="@mipmap/safety_check"
+                    android:drawablePadding="10dp"
+                    android:layout_marginTop="@dimen/dp_27"
+                    android:paddingBottom="@dimen/dp_27"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/dp_1"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/quality_check"
+                    android:text="   质量检查   "
+                    android:textColor="@color/color_2F"
+                    android:textSize="@dimen/sp_14"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:drawableTop="@mipmap/quality_check"
+                    android:drawablePadding="10dp"
+                    android:paddingBottom="@dimen/dp_27"
+                    android:layout_marginTop="@dimen/dp_27"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <View
+                    android:background="@color/color_F7"
+                    android:layout_width="@dimen/dp_1"
+                    android:layout_height="match_parent"/>
+                <TextView
+                    android:id="@+id/project_management"
+                    android:text="施工方案管理"
+                    android:textColor="@color/color_2F"
+                    android:textSize="@dimen/sp_14"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="@dimen/dp_1"
+                    android:drawableTop="@mipmap/project_management"
+                    android:drawablePadding="10dp"
+                    android:layout_marginTop="@dimen/dp_27"
+                    android:paddingBottom="@dimen/dp_27"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <View
+                    android:background="@color/color_F7"
+                    android:layout_width="@dimen/dp_1"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:id="@+id/decorate"
+                    android:text="   装饰修饰   "
+                    android:textColor="@color/color_2F"
+                    android:textSize="@dimen/sp_14"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="@dimen/dp_1"
+                    android:drawableTop="@mipmap/decorate"
+                    android:drawablePadding="10dp"
+                    android:layout_marginTop="@dimen/dp_27"
+                    android:paddingBottom="@dimen/dp_27"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

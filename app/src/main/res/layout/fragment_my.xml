@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/color_F7"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/titlebar"/>
+
+    <LinearLayout
+        android:gravity="center"
+        android:background="@drawable/my_bg"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_224">
+        <ImageView
+            android:id="@+id/headPic"
+            android:src="@drawable/headpic"
+            android:layout_width="@dimen/dp_75"
+            android:layout_height="@dimen/dp_75"/>
+        <TextView
+            android:text="枫叶"
+            android:layout_marginTop="@dimen/dp_18"
+            android:textSize="@dimen/sp_22"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:text="角色：设计A01"
+            android:layout_marginTop="@dimen/dp_18"
+            android:textSize="@dimen/sp_18"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/project"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:layout_marginTop="@dimen/dp_5"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_45">
+        <TextView
+            android:layout_marginLeft="@dimen/dp_15"
+            android:text="默认项目"
+            android:textColor="@color/color_3"
+            android:textSize="@dimen/sp_20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <Space
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_marginRight="@dimen/dp_12"
+            android:text="一期工程"
+            android:textColor="@color/color_3"
+            android:textSize="@dimen/sp_15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:layout_marginRight="@dimen/sp_15"
+            android:src="@mipmap/down"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+
+</LinearLayout>

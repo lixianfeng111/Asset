@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/pop_project_shape"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40">
+        <TextView
+            android:text="选择项目"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:textSize="@dimen/sp_15"
+            android:textColor="@color/color_6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <Space
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:text="X"
+            android:id="@+id/cancel"
+            android:layout_marginRight="@dimen/dp_15"
+            android:textSize="@dimen/sp_16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <View
+        android:background="@color/color_F9"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_2"/>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab"
+        android:background="@color/color_F9"
+        app:tabRippleColor = "@android:color/transparent"
+        app:tabTextColor="@color/color_9"
+        app:tabSelectedTextColor="@color/color_94252A"
+        app:tabIndicatorColor="@color/color_94252A"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:layout_weight="5"
+        android:id="@+id/viewPager"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_250">
+
+    </androidx.viewpager.widget.ViewPager>
+
+    <LinearLayout
+        android:gravity="center"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginBottom="@dimen/dp_38"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_30">
+        <TextView
+            android:id="@+id/cancel_button"
+            android:text="取消"
+            android:gravity="center"
+            android:background="@drawable/reset_btn_shape"
+            android:textColor="@color/black"
+            android:layout_width="@dimen/dp_100"
+            android:layout_height="match_parent"/>
+        <TextView
+            android:id="@+id/confirm_btn"
+            android:text="确认"
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/dp_75"
+            android:background="@drawable/confirm_btn_shape"
+            android:textColor="@color/color_F9"
+            android:layout_width="@dimen/dp_100"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_marginTop="@dimen/dp_15"
+    android:layout_marginLeft="@dimen/dp_15"
+    android:layout_marginRight="@dimen/dp_15"
+    android:background="@drawable/item_shape"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/serial_number"
+        android:layout_marginTop="@dimen/dp_19"
+        android:layout_marginLeft="@dimen/sp_15"
+        android:text="单据编号：GH878784234"
+        android:textSize="@dimen/sp_15"
+        android:textColor="@color/color_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/abarbeitung"
+        android:layout_below="@+id/serial_number"
+        android:layout_marginTop="@dimen/dp_14"
+        android:layout_marginLeft="@dimen/sp_15"
+        android:text="1项需整改，1项整改完成"
+        android:textSize="@dimen/sp_15"
+        android:textColor="@color/color_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/rummager"
+        android:layout_below="@+id/abarbeitung"
+        android:layout_marginTop="@dimen/dp_14"
+        android:layout_marginLeft="@dimen/sp_15"
+        android:text="检查人：陈远鹏"
+        android:textSize="@dimen/sp_15"
+        android:textColor="@color/color_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_marginBottom="@dimen/dp_19"
+        android:id="@+id/check_date"
+        android:layout_below="@+id/rummager"
+        android:layout_marginTop="@dimen/dp_14"
+        android:layout_marginLeft="@dimen/sp_15"
+        android:text="检查日期：2021-05-10"
+        android:textSize="@dimen/sp_15"
+        android:textColor="@color/color_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <ImageView
+        android:layout_marginRight="@dimen/dp_25"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:id="@+id/pass"
+        android:src="@drawable/pass"
+        android:layout_width="@dimen/dp_72"
+        android:layout_height="@dimen/dp_65"/>
+</RelativeLayout>

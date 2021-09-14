@@ -1,0 +1,83 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    defaultConfig {
+        applicationId "com.yhhl.asset"
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+
+        ndk {
+            //选择要添加的对应cpu类型的.so库。
+            abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a', 'x86'
+            // 还可以添加 'x86', 'x86_64', 'mips', 'mips64'
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    android.applicationVariants.all { variant ->
+        variant.outputs.all {
+            outputFileName = "Asset_" + defaultConfig.versionCode + '_v' + defaultConfig.versionName + "_" + buildType.name + '.apk'
+        }
+    }
+    //jniLibs JNI配置
+    sourceSets {
+        main {
+            jniLibs.srcDir 'libs'
+            //说明so的路径为该libs路径，关联所有地图SDK的so文件
+        }
+    }
+}
+
+dependencies {
+
+    implementation rootProject.ext.dependencies["appcompat"]
+    implementation rootProject.ext.dependencies["material"]
+    implementation rootProject.ext.dependencies["constraintlayout"]
+    implementation files('libs\\QWeather_Public_Android_V4.5.jar')
+    implementation files('libs\\BaiduLBS_Android.jar')
+    testImplementation rootProject.ext.dependencies["testImplementation-junit"]
+    androidTestImplementation rootProject.ext.dependencies["androidTestImplementation-junit"]
+    androidTestImplementation rootProject.ext.dependencies["androidTestImplementation-espresso-core"]
+    implementation rootProject.ext.dependencies["gson"]
+    implementation rootProject.ext.dependencies["recyclerview"]
+    implementation rootProject.ext.dependencies["glide"]
+    annotationProcessor rootProject.ext.dependencies["glide-compiler"]
+    implementation rootProject.ext.dependencies["jxl"]
+    implementation rootProject.ext.dependencies["logging-interceptor"]
+    implementation rootProject.ext.dependencies["logger"]
+    implementation rootProject.ext.dependencies["rxjava"]
+    implementation rootProject.ext.dependencies["rxandroid"]
+    implementation rootProject.ext.dependencies["retrofit"]
+    implementation rootProject.ext.dependencies["adapter-rxjava2"]
+    implementation rootProject.ext.dependencies["converter-gson"]
+    implementation rootProject.ext.dependencies["okhttp"]
+    implementation rootProject.ext.dependencies["butterknife"]
+    annotationProcessor  rootProject.ext.dependencies["butterknife-compiler"]
+    implementation rootProject.ext.dependencies["design"]
+    implementation rootProject.ext.dependencies["eventbus"]
+    implementation rootProject.ext.dependencies["glide-transformations"]
+    implementation rootProject.ext.dependencies["avi-library"]
+    implementation rootProject.ext.dependencies["nineoldandroids-library"]
+    implementation rootProject.ext.dependencies["swiperefreshlayout"]
+    implementation rootProject.ext.dependencies["DialogUtil"]
+    implementation rootProject.ext.dependencies["PickerView"]
+    implementation rootProject.ext.dependencies["litepal"]
+    implementation rootProject.ext.dependencies["easypermissions"]
+    implementation project(':BaseAdapter')
+}

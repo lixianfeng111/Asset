@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/dp_10"
+    android:layout_gravity="center">
+
+    <LinearLayout
+        android:paddingLeft="@dimen/dp_30"
+        android:paddingRight="@dimen/dp_30"
+        android:paddingTop="@dimen/dp_20"
+        android:paddingBottom="@dimen/dp_20"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/fu1"
+            android:gravity="center_horizontal"
+            android:textColor="@color/color_9"
+            android:text="附件1"
+            android:textSize="@dimen/sp_15"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/fu2"
+            android:layout_marginTop="@dimen/dp_20"
+            android:gravity="center_horizontal"
+            android:textColor="@color/color_9"
+            android:text="附件2"
+            android:textSize="@dimen/sp_15"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+<!--        <TextView-->
+<!--            android:id="@+id/fu3"-->
+<!--            android:layout_marginTop="@dimen/dp_20"-->
+<!--            android:gravity="center_horizontal"-->
+<!--            android:textColor="@color/color_9"-->
+<!--            android:text="附件3"-->
+<!--            android:textSize="@dimen/sp_15"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"/>-->
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

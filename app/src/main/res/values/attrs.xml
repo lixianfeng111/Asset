@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!--底部导航-->
+    <declare-styleable name="TabView" tools:ignore="MissingDefaultResource">
+        <attr name="tab_textViewSelColor"
+            format="reference|color"/>
+        <attr name="tab_textViewUnSelColor"
+            format="reference|color"/>
+        <attr name="tab_tabViewBackgroundColor"
+            format="reference|color"/>
+        <attr name="tab_tabViewHeight"
+            format="dimension"/>
+        <attr name="imageViewTextViewMargin"
+            format="dimension"/>
+        <attr name="tab_textViewSize"
+            format="dimension"/>
+        <attr name="tab_imageViewWidth"
+            format="dimension"/>
+        <attr name="tab_imageViewHeight"
+            format="dimension"/>
+        <attr name="tab_tabViewGravity">
+            <flag name="top" value="0x30" />
+            <flag name="bottom" value="0x50" />
+            <flag name="left" value="0x03" />
+            <flag name="right" value="0x05" />
+        </attr>
+        <attr name="tab_tabViewDefaultPosition"
+            format="integer"/>
+    </declare-styleable>
+
+    <declare-styleable name="StatusBarHeightView">
+        <attr name="use_type" format="integer">
+            <enum name="use_height" value="0" />
+            <enum name="use_padding_top" value="1" />
+        </attr>
+    </declare-styleable>
+
+    <!--  ToolBar menu 的弹出框的主题  -->
+<!--    <style name="PopupMenu" parent="ThemeOverlay.AppCompat.Light">-->
+<!--        <item name="android:colorBackground">@color/colorAccent</item>-->
+<!--        <item name="android:textColor">@android:color/white</item>-->
+<!--        <item name="overlapAnchor">false</item>-->
+<!--    </style>-->
+    <style name="DivideLine">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">#efeff4</item>
+    </style>
+
+    <attr name="indexBarTextSize" format="dimension" tools:ignore="MissingDefaultResource" />
+
+    <declare-styleable name="IndexBar">
+        <attr name="indexBarTextSize" />
+        <attr name="indexBarPressBackground" format="color" />
+    </declare-styleable>
+</resources>
